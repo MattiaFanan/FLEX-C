@@ -11,7 +11,7 @@ The Papermill executor in `main.py` allows tuning two parameters:
   Number of seeds for the experiments. The code will try to load `seeds.json` from the experiment folder, and if the number of loaded seeds does not match this parameter, an error is raised.
 
 # Reproducing the experiments from the publication
-The file `seeds.json` contains the seeds used in the publication. The experiment will automatically load it if present, ensuring reproducibility, as long as `'n_seeds': 25` is set in `main.py`.
+The file `seeds.json` contains the seeds used in the publication. The experiment automatically loads it if available. Ensure that `n_seeds: 25` is set in main.py, otherwise an error will occur.
 
 The experiments notebook includes a safeguard to prevent overwriting results: it checks for the folder `results_namedataset` and raises an exception if it already exists.
 
